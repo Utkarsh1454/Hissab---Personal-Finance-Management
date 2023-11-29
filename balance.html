@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="balance.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <title>Balance | Hissab</title>
+    <link rel="icon" href="logo.jpeg">
+</head>
+
+<body>
+    <header>
+        <p class="nav1">
+            <nav class="navbar">
+                <span class="hamburger-btn material-symbols-rounded">Home</span>
+                <a href="login.html" class="logo">
+                    <img src="logo.jpeg" alt="Hissab/logo">
+                </a>
+                <ul class="links">
+                    <span class="close-btn material-symbols-rounded">close</span>
+                    <li><a href="login.html" target="_blank">Home</a></li>
+                    <li><a href="balance.html" target="_blank">Balance</a></li>
+                    <li><a href="calender.html" target="_blank">Calendar</a></li>
+                    <li><a href="about.html"  target="_blank">About us</a></li>
+                </ul>
+            </nav>
+        </p>
+    </header>
+
+    <main class="container">
+        <section id='balance'>
+            <h2 class="sr-only">Balance</h2>
+
+            <div class="card incomes">
+                <h3>
+                    <span>Income</span>
+                    <img src="income.jpg" alt="Income logo" height="50px" width="50px">
+                </h3>
+                <p id="incomes-display">Rs 0.00</p>
+            </div>
+
+            <div class="card expenses">
+                <h3>
+                    <span>Expense</span>
+                    <img src="expense.png" alt="Expense logo" height="50px" width="50px">
+                </h3>
+                <p id="expenses-display">Rs 0.00</p>
+            </div>
+
+            <div class="card total">
+                <h3>
+                    <span>Wallet</span>
+                    <img src="wallet.jpg" alt="Wallet logo" height="50px" width="50px">
+                </h3>
+                <p id="total-amount-display">Rs 0.00</p>
+            </div>
+        </section>
+
+        <section id='transactions'>
+            <h2 class="sr-only">Transaction</h2>
+            <a href="#" onclick="Modal.toggleState('new')" class="button new">+ New transaction</a>
+            <table id="data-table">
+                <thead>
+                    <th>Description</th>
+                    <th>Value</th>
+                    <th>Date</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2 class="title">New Transaction</h2>
+                <form action="" onsubmit="Form.submit(event)">
+                    <div class="input-group">
+                        <label class="sr-only" for="description">Description</label>
+                        <input type="text" id="description" name="description" placeholder="Description" autocomplete="off"/>
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="amount">Value</label>
+                        <input type="number" step=0.01 id="amount" name="amount" placeholder="0.00" autocomplete="off" />
+                        <small class="help">Use the - sign (negative) for expenses and , (comma) for decimals.</small>
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="date">Date</label>
+                        <input type="date" id="date" name="date" placeholder="dd/mm/yyyy"/>
+                    </div>
+                    <div class="input-group actions">
+                        <a href="#" onclick="Modal.toggleState()" class="button cancel">Cancel</a>
+                        <button class="btn-save">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay-confirm">
+        <div class="modal-confirm">
+            <div class="confirm">
+                <h2>Do you really want to delete?</h2>
+                <div class="button-group">
+                    <button onclick="Modal.toggleScreen()" class="btn hover">No</button>
+                    <button onclick="Modal.toggleScreen(null, 'yes')" class="btn hover">Yes</button>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p> Hissab</p>
+    </footer>
+</body>
+<script src="balance.js"></script>
+
+</html>

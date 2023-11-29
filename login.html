@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hissab - Personal Finance Management</title>
+    <link rel="icon" href="logo.jpeg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">Home</span>
+            <a href="login.html" class="logo">
+                <img src="logo.jpeg" alt="Hissab/logo">
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+                <li><a href="login.html" target="_blank">Home</a></li>
+                <li><a href="balance.html" target="_blank">Balance</a></li>
+                <li><a href="calender.html" target="_blank">Calendar</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+            <button class="login-btn">LOG IN</button>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <img src="logo.jpeg" alt="Personal Finance Management" height="100px" width="100px">
+        <h1>Hissab - Personal Finance Management</h1>
+        <p>Make your life easy by tracking your expenses.</p>
+    </div>
+
+
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-rounded">close</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Please log in using your personal information to stay connected with us.</p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <a href="#" class="forgot-pass-link">Forgot password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>To become a part of our community, please sign up using your personal information.</p>
+            </div>
+            <div class="form-content">
+                <h2>SIGNUP</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Enter your email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Create password</label>
+                    </div>
+                    <div class="policy-text">
+                        <input type="checkbox" id="policy">
+                        <label for="policy">
+                            I agree the
+                            <a href="#" class="option">Terms & Conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Already have an account? 
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="features-section">
+        <h2>Key Features</h2>
+        <div class="feature">
+            <img src="expense.png" alt="expense tracking">
+            <p>Expense Tracking: Easily monitor your spending and stay on top of your budget.</p>
+        </div>
+        <div class="feature">
+            <img src="calender.jpeg" alt="calender">
+            <p>Calender: So that that you can keep track of everythig.</p>
+        </div>
+    </div>
+
+    <div class="testimonial-section">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            <img src="avatar1.png" alt="User 1">
+            <p>"Hissab has been a game-changer for me. I now have a clear understanding of my finances and can make informed decisions."</p>
+            <p class="user-info">- John Doe, Hissab User</p>
+        </div>
+    </div>
+</body>
+</html>
